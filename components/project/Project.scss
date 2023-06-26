@@ -1,0 +1,51 @@
+@import "./../../styles/Variables";
+
+.portfolio {
+  position: relative;
+  padding: 100px 0;
+
+  .title {
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    @media ($phone_max) {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+  .card__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+  }
+  .project__btns {
+    text-align: center;
+    margin-top: 40px;
+    a {
+      background: rgb(114, 226, 174);
+      color: #000;
+      display: inline-block;
+      font-weight: 600;
+      padding: 15px 45px;
+      border: 1px solid transparent;
+      text-transform: capitalize;
+      z-index: 1;
+      position: relative;
+      font-size: 16px;
+      transition: all 0.3s;
+      border-radius: 0;
+      cursor: pointer;
+      text-decoration: none;
+      &:hover {
+        background: transparent;
+        color: rgb(114, 226, 174);
+        border: 1px solid rgb(114, 226, 174);
+      }
+    }
+  }
+}

@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+@import "./Variables";
+
+// Css Reset Code
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  background: #687693;
+  // -webkit-border-radius: 1ex;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6d6d6;
+  -webkit-border-radius: 1ex;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+// .line::after,
+// .line::before {
+//   @media ($desktop_min) {
+//     position: absolute;
+//     width: 1px;
+//     height: 100%;
+//     content: "";
+//     background: #ebebeb;
+//     z-index: 11;
+//   }
+// }
+
+// .line::before {
+//   left: 30px;
+//   top: 0;
+//   @media (min-width: 1200px) {
+//     left: 100px;
+//   }
+// }
+// .line::after {
+//   right: 30px;
+//   top: 0;
+//   @media (min-width: 1200px) {
+//     right: 100px;
+//   }
+// }
+
+.container__fluid {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media (min-width: 1440px) {
+    max-width: 1280px;
+  }
+}
+
+/*******************
+-Button Style
+*******************/
+
+.btn {
+  background: rgb(114, 226, 174);
+  color: #000;
+  display: inline-block;
+  font-weight: $SemiBold;
+  padding: 15px 45px;
+  border: 1px solid transparent;
+  text-transform: capitalize;
+  z-index: 1;
+  position: relative;
+  font-size: 16px;
+  transition: all 0.3s;
+  border-radius: 0;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background: transparent;
+    color: rgb(114, 226, 174);
+    border: 1px solid rgb(114, 226, 174);
+  }
+}
+
+.bg-grey {
+  background-color: rgb(15 23 42);
+}
+.blurredBg {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: url("https://tf-react-bieber.vercel.app/images/body-bg.png");
+    background-size: cover;
+  }
+}
+
+.bg-grey {
+  background-color: rgba(15, 23, 42, 0.95);
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+}
+.backdrop-filter {
+  backdrop-filter: blur(16px);
+}
+
+::selection {
+  background-color: rgb(114, 226, 174);
+  color: rgb(15, 23, 42);
+}
+
+// animated_header
+.animated_header {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  background-color: rgba(15, 23, 42, 0.7);
+  transition: all 0.6s ease-in-out;
+}
+.show_header {
+  top: 0;
+}

@@ -1,0 +1,111 @@
+@import "./../../styles/Variables";
+
+.root_tech_item {
+  width: 170px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  @media (max-width: 992px) {
+    flex: 0 0 87px;
+    height: 87px;
+  }
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.skills {
+  position: relative;
+  padding: 50px 0;
+  overflow: hidden;
+  @media ($phone_max) {
+    padding: 50px 0;
+  }
+  .subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    padding-left: 15px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+    background: $white;
+    z-index: 1;
+    color: $titleColor;
+    &::before {
+      position: absolute;
+      left: 0;
+      top: -8px;
+      height: 39px;
+      width: 39px;
+      content: "";
+      border: 2px solid $titleColor;
+      z-index: -11;
+    }
+    &::after {
+      position: absolute;
+      left: 34px;
+      top: 2px;
+      height: 20px;
+      width: 20px;
+      content: "";
+      background: $white;
+      z-index: -1;
+    }
+  }
+  .title {
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    @media ($phone_max) {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+  .technologies_container {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    @media (max-width: 992px) {
+      gap: 1.5rem;
+      margin-top: 30px;
+    }
+    .tech_item {
+      background-color: rgb(255, 255, 255, 0.05);
+      border-radius: 2rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      flex: 0 0 170px;
+      height: 170px;
+      gap: 0.7rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      @media (max-width: 992px) {
+        flex: 0 0 87px;
+        height: 87px;
+        gap: 0.3rem;
+      }
+
+      &_img {
+        width: 70px;
+        height: 70px;
+        @media (max-width: 992px) {
+          width: 35px;
+          height: 35px;
+        }
+      }
+      &_text {
+        font-size: 0.8rem;
+        color: $white;
+      }
+    }
+  }
+}

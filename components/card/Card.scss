@@ -1,0 +1,84 @@
+@import "./../../styles/Variables";
+
+.card__box {
+  position: relative;
+  width: 334px;
+  height: 334px;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-radius: 5px;
+  .card__thumbnail {
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+    img {
+      width: 100%;
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
+
+  .card__content {
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba($black, 0.7);
+    h3,
+    p {
+      color: $white;
+    }
+    .icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      a {
+        color: $white;
+        transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+  .left {
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+    left: -100% !important;
+    bottom: 0;
+  }
+  .right {
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+    right: -100% !important;
+    bottom: 0;
+  }
+  .bottom {
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+    bottom: -100% !important;
+    left: 0;
+  }
+  .top {
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+    top: -100% !important;
+    left: 0;
+  }
+  &:hover {
+    .card__thumbnail {
+      transform: scale(1.1);
+    }
+    .left {
+      left: 0 !important;
+    }
+    .right {
+      right: 0 !important;
+    }
+    .bottom {
+      bottom: 0 !important;
+    }
+    .top {
+      top: 0 !important;
+    }
+  }
+}
