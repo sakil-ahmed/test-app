@@ -23,6 +23,7 @@ const Card2 = ({ item: { id, img, liveLink, repoLink, subTitle } }: item) => {
         viewport={{ once: true, amount: 0.5 }}
         // @ts-ignore
         transition={{
+          // @ts-ignore
           type: "spring",
           // @ts-ignore
           Bounce: 0.25,
