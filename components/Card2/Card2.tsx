@@ -24,6 +24,7 @@ const Card2 = ({ item: { id, img, liveLink, repoLink, subTitle } }: item) => {
         // @ts-ignore
         transition={{
           type: "spring",
+          // @ts-ignore
           Bounce: 0.25,
           duration: 1,
         }}
