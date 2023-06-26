@@ -21,8 +21,11 @@ const Card = ({ item: { id, img, liveLink, repoLink, subTitle } }: item) => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
       transition={{
+        // @ts-ignore
         type: "spring",
+        // @ts-ignore
         Bounce: 0.25,
+        // @ts-ignore
         duration: 1,
       }}
       variants={{

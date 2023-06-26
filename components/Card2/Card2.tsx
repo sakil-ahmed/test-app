@@ -27,6 +27,7 @@ const Card2 = ({ item: { id, img, liveLink, repoLink, subTitle } }: item) => {
           type: "spring",
           // @ts-ignore
           Bounce: 0.25,
+          // @ts-ignore
           duration: 1,
         }}
         variants={{

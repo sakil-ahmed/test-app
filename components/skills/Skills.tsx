@@ -42,9 +42,13 @@ const Skills = () => {
                   viewport={{ once: true, amount: 0.5 }}
                   // @ts-ignore
                   transition={{
+                    // @ts-ignore
                     type: "spring",
+                    // @ts-ignore
                     Bounce: 0.25,
+                    // @ts-ignore
                     duration: 1,
+                    // @ts-ignore
                     delay: 0.1 * id,
                   }}
                   variants={{
