@@ -1,12 +1,12 @@
-import React, { useRef } from "react";
-import { MdOutlineWifiCalling3, MdOutlineEmail } from "react-icons/md";
-import { motion } from "framer-motion";
-import { useForm } from "react-hook-form";
+import React, {useRef} from "react";
+import {MdOutlineWifiCalling3, MdOutlineEmail} from "react-icons/md";
+import {motion} from "framer-motion";
+import {useForm} from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
+import {ToastContainer, toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { animationFade } from "@/components/Animation/Motion";
-import { yupResolver } from "@hookform/resolvers/yup";
+import {animationFade} from "@/components/Animation/Motion";
+import {yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 const Form = () => {
@@ -14,62 +14,54 @@ const Form = () => {
 
   const schema = yup
     .object({
-      name: yup.string().required("Name is required"),
-
+      name: yup.string().required(),
       email: yup
         .string()
-        .required("Email is required")
-        .email("Email is invalid"),
-
-      message: yup.string().required("Message is required"),
+        .required()
+        .email(),
+      message: yup.string().required(),
     })
     .required();
+
+  const option = {
+    position: "top-center",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  }
 
   type FormData = yup.InferType<typeof schema>;
 
   const {
     register,
     handleSubmit,
+    reset,
+    formState: {errors},
+  } = useForm<FormData>({resolver: yupResolver(schema)});
 
-    formState: { errors },
-  } = useForm<FormData>({ resolver: yupResolver(schema) });
+  const onSubmit = async () => {
 
-  const onSubmit = () => {
-    emailjs
-      .sendForm(
-        "service_28srm6x",
-        "template_9taiuii",
-        form.current,
-        "RYB7CBoTag91d7Zoq"
-      )
-      .then(
-        (result) => {
-          toast.success("Email Send Successfully", {
-            position: "top-center",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
-        },
-        (error) => {
-          toast.error("There was an error try again", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
-        }
-      );
+    try {
+      const res = await emailjs
+        .sendForm(
+          "service_28srm6x",
+          "template_9taiuii",
+          form.current,
+          "RYB7CBoTag91d7Zoq"
+        )
+      if (res.status === 200) {
+        toast("Message Success", option as any)
+      }
+    } catch (err: any) {
+      console.log(err)
+    } finally {
 
-    form.current.reset();
+    }
+    reset()
   };
 
   return (
@@ -105,13 +97,13 @@ const Form = () => {
         <div className="text">
           <span className="phone">
             <span>
-              <MdOutlineWifiCalling3 />
+              <MdOutlineWifiCalling3/>
             </span>{" "}
             +880 1729-925644
           </span>
           <span className="email">
             <span>
-              <MdOutlineEmail />
+              <MdOutlineEmail/>
             </span>{" "}
             sakilahmed.dev@gmail.com
           </span>

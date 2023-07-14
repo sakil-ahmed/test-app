@@ -24,7 +24,8 @@ export default function Home() {
     };
   }, []);
 
-  console.log(scrollPosition);
+
+
 
   return (
     <div className="bg-grey blurredBg">

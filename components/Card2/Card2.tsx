@@ -3,6 +3,7 @@ import React from "react";
 import LinkIcon from "@/assets/linkIcon";
 import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
+import {animationFade} from "@/components/Animation/Motion";
 
 interface item {
   item: {
@@ -18,22 +19,7 @@ const Card2 = ({ item: { id, img, liveLink, repoLink, subTitle } }: item) => {
   return (
     <div className="root_card">
       <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        // @ts-ignore
-        transition={{
-          // @ts-ignore
-          type: "spring",
-          // @ts-ignore
-          Bounce: 0.25,
-          // @ts-ignore
-          duration: 1,
-        }}
-        variants={{
-          hidden: { opacity: 0, y: 100 },
-          visible: { opacity: 1, y: 0 },
-        }}
+        {...animationFade("bottom", 100)}
         className="card"
       >
         <div className="card_top">
