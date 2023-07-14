@@ -9,7 +9,8 @@ import { card } from "@/public/data/CardData";
 import { useRouter } from "next/router";
 
 const Project = () => {
-  const [isAcitve, setIsActive] = useState<any>("#all");
+  const [isAcitve, setIsActive] = useState<any>("/#all");
+  const [filterData, setFilterData] = useState<any>(card);
   const [letterClass, setLetterClass] = useState("text-animate");
   const textArrayname = "My Latest Project".split("");
   const router = useRouter();
@@ -18,7 +19,14 @@ const Project = () => {
 
     setIsActive(router.asPath);
   }, [router.asPath]);
-  console.log(router.asPath);
+
+  /**
+   * Filter Data
+   **/
+  const FilterData = (category: string) => {
+    const data = card.filter((item) => item.Category === category);
+    setFilterData(data.length ? data : card);
+  };
 
   return (
     <section className="portfolio" id="portfolio">
@@ -34,30 +42,44 @@ const Project = () => {
           {/*Filter */}
           <div className={"button_container"}>
             <Link href={"#all"}>
-              <button className={isAcitve === "/#all" ? "active" : ""}>
+              <button
+                onClick={() => FilterData("all")}
+                className={
+                  isAcitve === "/#all" || isAcitve === "/" ? "active" : ""
+                }
+              >
                 {"All"}
               </button>
             </Link>
             <Link href={"#LandingPage"}>
-              <button className={isAcitve === "/#LandingPage" ? "active" : ""}>
+              <button
+                onClick={() => FilterData("LandingPage")}
+                className={isAcitve === "/#LandingPage" ? "active" : ""}
+              >
                 {"Landing Page"}
               </button>
             </Link>
             <Link href={"#E-commerce"}>
-              <button className={isAcitve === "/#E-commerce" ? "active" : ""}>
+              <button
+                onClick={() => FilterData("E-commerce")}
+                className={isAcitve === "/#E-commerce" ? "active" : ""}
+              >
                 {"E-commerce"}
               </button>
             </Link>
             <Link href={"#WebApps"}>
-              <button className={isAcitve === "/#WebApps" ? "active" : ""}>
+              <button
+                onClick={() => FilterData("Web Apps")}
+                className={isAcitve === "/#WebApps" ? "active" : ""}
+              >
                 {"Web Apps"}
               </button>
             </Link>
           </div>
 
           {/*Filter */}
-          <motion.div className="card__container">
-            {card.map((item) => {
+          <motion.div layout className="card__container">
+            {filterData.map((item: any) => {
               return <Card2 key={item.id} item={item} />;
             })}
           </motion.div>
