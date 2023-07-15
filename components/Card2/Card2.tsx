@@ -3,7 +3,7 @@ import React from "react";
 import LinkIcon from "@/assets/linkIcon";
 import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
-import {animationFade} from "@/components/Animation/Motion";
+import { animationFade } from "@/components/Animation/Motion";
 
 interface item {
   item: {
@@ -17,11 +17,8 @@ interface item {
 
 const Card2 = ({ item: { id, img, liveLink, repoLink, subTitle } }: item) => {
   return (
-    <div className="root_card">
-      <motion.div
-        {...animationFade("bottom", 100)}
-        className="card"
-      >
+    <motion.div layout className="root_card">
+      <motion.div {...animationFade("bottom", 100)} className="card">
         <div className="card_top">
           <Image src={img} alt="Project Thumbnail" priority={true} />
           <div className="card_links">
@@ -38,7 +35,7 @@ const Card2 = ({ item: { id, img, liveLink, repoLink, subTitle } }: item) => {
           <h5 className="card_description">UI/UX Sample design mockup</h5>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -78,7 +78,7 @@ const Project = () => {
           </div>
 
           {/*Filter */}
-          <motion.div layout className="card__container">
+          <motion.div className="card__container">
             {filterData.map((item: any) => {
               return <Card2 key={item.id} item={item} />;
             })}
