@@ -15,6 +15,8 @@ import tailwindcss from "./../../assets/tailwind.png";
 import figma from "./../../assets/figma.png";
 import github from "./../../assets/github.png";
 import git from "./../../assets/git.png";
+import chakra from "./../../assets/chakra-ui.png";
+import gatsby from "./../../assets/gatsbyjs.png";
 import { RiFacebookFill } from "react-icons/ri";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -126,6 +128,16 @@ export const skillsData = [
     id: 10,
     img: git,
     text: "Git",
+  },
+  {
+    id: 11,
+    img: chakra,
+    text: "Chakra ui",
+  },
+  {
+    id: 12,
+    img: gatsby,
+    text: "Gatsby Js",
   },
 ];
 
