@@ -30,7 +30,6 @@ export const card = [
     subTitle: "Minimog",
     liveLink: "https://minimog.netlify.app/",
     repoLink: "https://github.com/sakil-ahmed/Minimog",
-    Category: "E-commerce",
   },
   {
     id: 2,
@@ -39,7 +38,6 @@ export const card = [
     subTitle: "Okiro",
     liveLink: "https://okario.netlify.app",
     repoLink: "https://github.com/sakil-ahmed/Okiro",
-    Category: "LandingPage",
   },
   {
     id: 3,
@@ -48,16 +46,14 @@ export const card = [
     subTitle: "Grover Store",
     liveLink: "https://groverstore.netlify.app",
     repoLink: "https://github.com/sakil-ahmed/grover",
-    Category: "E-commerce",
   },
   {
     id: 4,
     img: portfolio,
     title: "",
-    subTitle: "portfolio V2",
+    subTitle: "Client Portal",
     liveLink: "https://sakilsahmed.netlify.app/",
     repoLink: "https://github.com/sakil-ahmed/primary-portfolio",
-    Category: "LandingPage",
   },
   {
     id: 5,
@@ -66,7 +62,6 @@ export const card = [
     subTitle: "Choicest Flower Shop",
     liveLink: "https://admin-deshboard.netlify.app/",
     repoLink: "https://github.com/sakil-ahmed/admin-dashboard/tree/main",
-    Category: "Web Apps",
   },
   {
     id: 6,
@@ -75,7 +70,6 @@ export const card = [
     subTitle: "Start Box",
     liveLink: "https://startbox.netlify.app",
     repoLink: "https://github.com/sakil-ahmed/Startbox",
-    Category: "LandingPage",
   },
 ];
 export const skillsData = [
