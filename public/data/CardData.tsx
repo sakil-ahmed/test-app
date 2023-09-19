@@ -80,53 +80,53 @@ export const skillsData = [
   },
 
   {
-    id: 3,
+    id: 2,
     img: javascript,
     text: "JavaScript",
   },
   {
-    id: 4,
+    id: 3,
     img: css,
     text: "Css",
   },
   {
-    id: 5,
+    id: 4,
     img: nextjs,
     text: "Next.js",
   },
   {
-    id: 6,
+    id: 5,
     img: typescript,
     text: "Typescript",
   },
   {
-    id: 7,
+    id: 6,
     img: tailwindcss,
     text: "Tailwindcss",
   },
   {
-    id: 9,
+    id: 7,
     img: github,
     text: "Git & GitHub",
   },
 
   {
-    id: 11,
+    id: 8,
     img: chakra,
     text: "Chakra ui",
   },
   {
-    id: 12,
+    id: 9,
     img: gatsby,
     text: "Gatsby Js",
   },
   {
-    id: 2,
+    id: 10,
     img: nodejs,
     text: "Node.js(basic)",
   },
   {
-    id: 14,
+    id: 11,
     img: nestjs,
     text: "Nest.js(basic)",
   },
