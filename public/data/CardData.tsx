@@ -14,7 +14,7 @@ import typescript from "./../../assets/ts.png";
 import tailwindcss from "./../../assets/tailwind.png";
 import figma from "./../../assets/figma.png";
 import github from "./../../assets/github.png";
-import git from "./../../assets/git.png";
+import nestjs from "./../../assets/nestjs-logo.png";
 import chakra from "./../../assets/chakra-ui.png";
 import gatsby from "./../../assets/gatsbyjs.png";
 import { RiFacebookFill } from "react-icons/ri";
@@ -78,11 +78,7 @@ export const skillsData = [
     img: react,
     text: "React",
   },
-  {
-    id: 2,
-    img: nodejs,
-    text: "Node.js",
-  },
+
   {
     id: 3,
     img: javascript,
@@ -109,20 +105,11 @@ export const skillsData = [
     text: "Tailwindcss",
   },
   {
-    id: 8,
-    img: figma,
-    text: "Figma",
-  },
-  {
     id: 9,
     img: github,
-    text: "GitHub",
+    text: "Git & GitHub",
   },
-  {
-    id: 10,
-    img: git,
-    text: "Git",
-  },
+
   {
     id: 11,
     img: chakra,
@@ -132,6 +119,16 @@ export const skillsData = [
     id: 12,
     img: gatsby,
     text: "Gatsby Js",
+  },
+  {
+    id: 2,
+    img: nodejs,
+    text: "Node.js(basic)",
+  },
+  {
+    id: 14,
+    img: nestjs,
+    text: "Nest.js(basic)",
   },
 ];
 

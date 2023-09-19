@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import AnimatedLetters from "../AnimatedLetters/index";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { animationFade } from "../Animation/Motion";
 import Card2 from "../Card2/Card2";
 import { card } from "@/public/data/CardData";

@@ -34,8 +34,8 @@ const Hero = () => {
               <h5 className="hero__subtitle">Sakil Ahmed</h5>
             </div>
             <div className="btns">
-              <a className="btn" href="#contact">
-                Contact Me
+              <a className="btn" href="/Resume.pdf" download>
+                Download CV
               </a>
             </div>
           </div>
